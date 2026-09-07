@@ -6,6 +6,3 @@
   <h1>Bukti Screenshot : </h1>
   <img src="./Tugas Praktikum 1//bukti.png" width="100%" alt="Bukti Screenshot" />
 </div>
-=======
-# Pengembangan-Aplikasi-Mobile
-
