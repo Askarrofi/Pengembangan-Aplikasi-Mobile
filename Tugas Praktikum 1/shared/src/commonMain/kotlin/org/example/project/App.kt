@@ -51,7 +51,6 @@ fun App() {
                     Text("Halo, R. Askarrofi Prabularizda Anggoro")
                     Text("124140070")
                     Text(getPlatform().name)
-                    Text("Test")
                 }
             }
         }
