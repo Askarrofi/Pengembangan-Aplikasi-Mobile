@@ -5,5 +5,4 @@
   <h2>NIM : 124140070</h2>
   <h2>Bukti Screenshot Tugas Praktikum 2: </h2>
   <img src="./bukti.png" width="100%" alt="Bukti Screenshot" width="400">
-  <img src="./bukti1.png" width="100%" alt="Bukti Screenshot" width="400">
 </div>
