@@ -1,5 +1,6 @@
 package com.example.myprofileapp
 
+import androidx.compose.animation.AnimatedVisibility
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
 import androidx.compose.foundation.border
@@ -10,6 +11,7 @@ import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
+import androidx.compose.foundation.layout.offset
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.shape.CircleShape
@@ -41,22 +43,35 @@ import myprofileapp.shared.generated.resources.bronya
 @Preview
 fun App() {
     MaterialTheme {
+        var showContent by remember { mutableStateOf(false) }
         Box(modifier = Modifier.fillMaxSize()){
             Image(
-
                 painter = painterResource(Res.drawable.bronyaback),
                 contentDescription = "Background Profile",
                 modifier = Modifier.fillMaxSize(),
                 contentScale = ContentScale.Crop
             )
         Box(
-
             modifier = Modifier
                 .fillMaxSize()
                 .background(Color.DarkGray.copy(alpha = 0.5f)),
-            contentAlignment = Alignment.Center
         ) {
-            ProfileCard()
+            AnimatedVisibility(
+                visible = showContent,
+                modifier = Modifier.align(Alignment.Center)
+            ) {
+                Box(modifier = Modifier.padding(16.dp)) {
+                    ProfileCard()
+                }
+            }
+            Button(onClick = { showContent = !showContent },
+                modifier = Modifier
+                    .align(Alignment.BottomCenter)
+                    .padding(bottom = 64.dp),
+                colors = ButtonDefaults.buttonColors(containerColor = Color.DarkGray))
+            {
+                Text(if (showContent) "Close" else "Open")
+            }
         }
         }
     }
