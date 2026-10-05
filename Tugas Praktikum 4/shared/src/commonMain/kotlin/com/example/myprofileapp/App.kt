@@ -97,7 +97,7 @@ data class ProfileUiState(
 
 @Composable
 @Preview
-fun App(viewModel: ProfileViewModel = viewModel()) {
+fun App(viewModel: ProfileViewModel = remember { ProfileViewModel() }) {
 
 
     val uiState by viewModel.uiState.collectAsState()
