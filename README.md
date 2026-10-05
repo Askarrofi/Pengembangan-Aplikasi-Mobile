@@ -16,4 +16,8 @@
   <p align="center">
     <img src="./Tugas Praktikum 3/bukti.png" width="100%" alt="Bukti Screenshot" width="400">
   </p>
+  <h2>Bukti Screenshot Tugas Praktikum 4: </h2>
+  <p align="center">
+    <img src="./Tugas Praktikum 4/bukti.png" width="100%" alt="Bukti Screenshot" width="400">
+  </p>
 </div>
